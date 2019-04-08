@@ -240,7 +240,7 @@ if __name__ == '__main__':
     #Example classifier 1
     print("Logistic regression (multinomial):")
     lr = LogisticRegression(penalty='l2', C=1.2, solver='lbfgs', multi_class='multinomial').fit(X_train, y_train)
-    preds = rfc.predict(X_test)
+    preds = lr.predict(X_test)
     print(classification_report(preds, y_test))
 
     '''
